@@ -1,0 +1,75 @@
+News about Wind releases
+------------------------
+
+This file documents the release history of the Wind window manager.
+Only significant changes are mentioned in this file; refer to the
+git repository for the complete changelogs.
+
+
+Version 1.5 (2014-05-21)
+------------------------
+
+- Support aspect ratio hints
+- Support ICCCM's urgency hint
+- Improve the smart window placement algorithm
+- Allocate 12 desktops if no option is specified and no setting exists
+- Improve fullscreen switching
+- Change bug report address to <windwm-bugs@lists.sourceforge.net>
+- Print name, version, and bug report address if -v is specified
+- Remove the -h option
+- Enable synchronous X11 mode if -v is specified
+- Fix bugs in MWM hints code
+- Fix _NET_WM_STATE bugs
+
+
+Version 1.4 (2011-01-19)
+------------------------
+
+- Truncate long window names
+- Remove _NET_WM_DESKTOP when a window is withdrawn [EWMH]
+
+
+Version 1.3 (2010-10-25)
+------------------------
+
+- Fix lost button-release events bug in frame
+
+
+Version 1.2 (2010-10-17)
+------------------------
+
+- Try harder to keep related windows on the same desktop
+- Fix wrong color of text underline in frame titles
+- Fix focus problem on window-manager shutdown
+- Don't ignore SIGHUP
+
+
+Version 1.1 (2010-09-17)
+------------------------
+
+- Smart window placement
+- Move windows using Alt+Button1
+- Refocus if input focus is set to None
+
+
+Version 1.0 (2010-06-28)
+------------------------
+
+- Right resizer position wrong by one pixel
+- Give up input focus if the pointer leaves to another screen
+- Partial support for colormap focus
+
+
+Version 0.2 (2010-06-17)
+------------------------
+
+- Change command-line syntax
+- Flicker-free resizing
+- Avoid frame exposure during client withdrawal
+- Disable most key bindings for dock windows
+
+
+Version 0.1 (2010-06-15)
+------------------------
+
+First release.

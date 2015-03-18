@@ -1,0 +1,67 @@
+The Wind window manager
+
+By Johan Veenhuizen
+veenhuizen@users.sourceforge.net
+
+http://windwm.sourceforge.net
+
+
+Documentation
+
+  Refer to the manual page for information on how to use Wind.
+
+
+License
+
+  Wind is free software distributed under the MIT license. The
+file LICENSE contains the full terms and conditions. The license
+text is also included in the manual page.
+
+
+Installation
+
+  Wind uses GNU Autotools for configuration and building. The
+following commands will configure, build, and install the
+program and documentation at the default locations.
+
+  $ ./configure
+  $ make
+  $ make install
+
+  The configure script takes several options to customize
+the installation. Type './configure --help' to list the
+supported options.
+
+
+Reporting bugs
+
+  If you find a bug, please try to reproduce it while running
+Wind with the -v option. This option will print the version
+information, along with Xlib errors, to the standard error file
+descriptor. This output might prove useful in understanding the
+bug, so please include it in your report.
+
+  Try to provide a detailed description of how to reproduce
+the problem, and send your report to the Wind mailing list,
+<windwm-bugs@lists.sourceforge.net>. You don't need to subscribe
+to this list, but if you're interested in Wind news and development
+you are very welcome to do so.
+
+
+Building the git source
+
+  The configure script and other files needed to build Wind are
+not under version control, so if you cloned the git repository
+you will need to generate them using the following command.
+
+  $ autoreconf -i
+
+  Note that you need to have GNU Autoconf and GNU Automake
+installed on your system.
+
+
+Hacking
+
+  Wind is implemented in C99, so it is okay to use most C99
+features. Please make an honest attempt to follow the coding
+style.

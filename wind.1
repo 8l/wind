@@ -1,0 +1,198 @@
+.TH WIND 1
+.SH NAME
+wind \- window manager
+.SH SYNOPSIS
+.B wind
+[
+.B \-v
+]
+[
+.B \-n
+number
+]
+[
+.B \-t
+font
+]
+[
+.B \-f
+color
+]
+[
+.B \-b
+color
+]
+[
+.B \-F
+color
+]
+[
+.B \-B
+color
+]
+[
+display
+]
+.SH DESCRIPTION
+.PP
+.I Wind
+is a window manager for the X Window System.
+It supports virtual desktops, Xft font rendering, and is
+pretty standards compliant.
+.PP
+A
+.I display
+argument may be specified to manage a display
+other than the default.
+.PP
+The following options are recognized:
+.TP
+.BR \-n \ number
+Set initial number of virtual desktops.
+Zero means keep current setting, and is the default.
+If no current setting exists, 12 desktops are allocated.
+.TP
+.BR \-t \ font
+Use
+.I font
+for window titles.
+.TP
+.BR \-f \ color
+Use
+.I color
+as foreground.
+.TP
+.BR \-b \ color
+Use
+.I color
+as background.
+.TP
+.BR \-F \ color
+Use
+.I color
+as focused foreground.
+.TP
+.BR \-B \ color
+Use
+.I color
+as focused background.
+.TP
+.B \-v
+Enable debug mode.
+This puts X11 transactions in synchronous mode,
+and prints Xlib errors to the standard error file descriptor.
+This option will slow things down, and is only useful for debugging.
+.TP
+Window focus
+Press a pointer button inside the window to raise it and
+give it the keyboard input focus.
+.TP
+Moving a window
+Drag the window by its title bar to the desired location.
+Alternatively, hold down the
+.B Alt
+key and grab the window from anywhere inside its frame.
+A moving window follows desktop switches.
+.TP
+Resizing a window
+Drag the top left or right corners to resize the window.
+.TP
+Deleting a window
+Push the
+.B \(mu
+button in the upper right corner of the frame to ask
+the window to delete itself.
+.TP
+Minimizing a window
+There are no minimized windows in
+.IR Wind ,
+but there are two substitutes:
+virtual desktops help organizing related windows,
+and the
+.B Alt-Esc
+key binding cycles between the applications on the current desktop.
+.TP
+Virtual desktops
+.I Wind
+supports virtual desktops as defined by
+the Extended Window Manager Hints specification.
+The first twelve desktops are addressable using the
+.BI Alt-F n
+key bindings.
+An external pager is needed to address more than twelve desktops.
+.PP
+The following key bindings are provided:
+.TP
+.B Alt-Esc
+Cycle through the open applications on the current desktop.
+.TP
+.B Alt-Backspace
+Ask the focused window to delete itself.
+.TP
+.B Alt-Return
+Toggle the fullscreen property of the focused window.
+.TP
+.B Alt-Space
+Toggle stickiness of the focused window.
+A sticky window is visible on all desktops.
+This property is indicated by an underlined window title.
+.TP
+.BI Alt-F n
+Switch to the
+.IR n -th
+virtual desktop.
+.TP
+.BI Shift-Alt-F n
+Change number of virtual desktops to
+.IR n ,
+and switch to the last one.
+Windows beyond desktop
+.I n
+are moved to
+.IR n .
+.B Shift-Alt-F1
+is particularly useful when logging out.
+.PP
+.I Wind
+terminates gracefully upon receipt of any of the
+SIGHUP, SIGINT, and SIGTERM signals.
+.SH AUTHOR
+.PP
+Johan Veenhuizen,
+.I \%veenhuizen@users.sourceforge.net
+.SH BUGS
+.PP
+Report bugs to the
+.I Wind
+mailing list:
+.RS
+.I \%windwm-bugs@lists.sourceforge.net
+.RE
+This list is also open for general discussion.
+.SH "SEE ALSO"
+.PP
+startx(1), xdm(1), X(7)
+.PP
+.I \%http://windwm.sourceforge.net
+.SH LICENSE
+.PP
+Copyright 2010 Johan Veenhuizen
+.PP
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files
+(the ``Software''), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+.PP
+THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
